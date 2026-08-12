@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación Flask</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .card {
+            background: white;
+            width: 420px;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+            animation: aparecer 0.6s ease;
+        }
+
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+
+        .name {
+            color: #667eea;
+            font-weight: bold;
+        }
+
+
+        p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+
+        .info {
+            background: #f4f6ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+
+        .button:hover {
+            background: #5563c1;
+        }
+
+
+        footer {
+            margin-top: 25px;
+            font-size: 13px;
+            color: #999;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="card">
+
+        <div class="icon">
+            🚀
+        </div>
+
+
+        <h1>
+            Bienvenido, <span class="name">{{ person }}</span>
+        </h1>
+
+
+        <p>
+            Esta es una aplicación web creada utilizando
+            <strong>Python Flask</strong>.
+        </p>
+
+
+        <div class="info">
+            <p>
+                La página utiliza plantillas HTML con
+                <strong>Jinja2</strong> para mostrar información enviada desde Python.
+            </p>
+        </div>
+
+
+        <a class="button">
+            Flask funcionando ✓
+        </a>
+
+
+        <footer>
+            Proyecto desarrollado en Python
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>
